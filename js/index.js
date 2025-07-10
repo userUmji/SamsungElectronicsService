@@ -134,9 +134,9 @@ window.addEventListener("DOMContentLoaded",()=>{
   // 화면 크기가 1023보다 클때 실행
   if(window.innerWidth > 1023){
     chatIcon.classList.add("active");
-    openFloatingBtn.querySelector("span").classList.add("active");
-    floatingWarp.classList.add("active");
   }
+  openFloatingBtn.querySelector("span").classList.add("active");
+  floatingWarp.classList.add("active");
 })
 // 화면 클릭하면 메뉴 off
 window.addEventListener("click",()=>{
@@ -158,12 +158,15 @@ window.addEventListener("scroll",()=>{
   else{
     topBtn.classList.remove("active");
   }
-  if(window.scrollY >= 3097){
-    appFloatingBtn.classList.add("no-fixed");
-    topBtn.classList.add("no-fixed");
-  }
-  else{
-    appFloatingBtn.classList.remove("no-fixed");
-    topBtn.classList.remove("no-fixed");
+  // 화면 크기가 1023이상일때만 실행
+  if(window.innerWidth > 1023){
+    if(window.scrollY >= 3097){
+      appFloatingBtn.classList.add("no-fixed");
+      topBtn.classList.add("no-fixed");
+    }
+    else{
+      appFloatingBtn.classList.remove("no-fixed");
+      topBtn.classList.remove("no-fixed");
+    }
   }
 })

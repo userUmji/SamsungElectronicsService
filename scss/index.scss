@@ -1403,6 +1403,7 @@ footer {
         &.active {
           width: 250px;
           border-radius: 130px;
+          text-shadow: 1px 1px 0 black;
           span {
             opacity: 1;
           }
@@ -1417,7 +1418,7 @@ footer {
           width: 160px;
           right: 70px;
           top: 10px;
-          font-size: 14px;
+          font-size: 13px;
           font-weight: 700;
           color: white;
           opacity: 0;
@@ -1737,7 +1738,6 @@ footer {
       }
     }
   }
-
   /*----------- main-visual -----------*/
   .main-visual {
     margin-top: 61px;
@@ -2071,8 +2071,9 @@ footer {
                 position: absolute;
                 top: 50%;
                 transform: translateY(-50%);
+                width: 30%;
                 .tip-title {
-                  font-size: 20px;
+                  font-size: 18px;
                   br {
                     display: none;
                   }
