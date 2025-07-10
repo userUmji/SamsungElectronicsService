@@ -44,8 +44,11 @@
 ### PC 네비게이션
 
 1. 마우스가 올려진 메뉴바로 파란색 박스가 이동합니다.
-
-
+<img width="1906" height="606" alt="Image" src="https://github.com/user-attachments/assets/00e8d9d9-7ce3-4878-96d9-7bb38194ac62" />  
+![Image](https://github.com/user-attachments/assets/195acdb1-f75c-4751-968b-ac95c769f455)  
+![Image](https://github.com/user-attachments/assets/3f5b4ec7-6ad7-4cef-a71c-548901d6b05f)  
+2. 서비스 Tip 섹션
+3. 사이드 메뉴
 ---
 
 ## 4. 작업 환경
