@@ -1,0 +1,48 @@
+/*폰트*/
+// @font-face {
+//   font-family: "SamsungOne 400";
+//   font-style: normal;
+//   font-weight: normal;
+//   src: local("SamsungOne 400"), url("SamsungOne-400.woff") format("woff");
+// }
+@import url('https://fonts.cdnfonts.com/css/samsungone');
+*{
+  margin: 0; padding: 0;
+  box-sizing: border-box;
+}
+html{
+  scroll-behavior: smooth;
+}
+body{
+  font-family: 'SamsungOne', sans-serif;
+  font-size: 15px;
+  overflow-x: hidden;
+}
+button{
+  cursor: pointer;
+  border: none;
+  background-color: transparent;
+  font-size: 1rem;
+}
+a{
+  text-decoration: none;
+  color: black;
+}
+strong{
+  font-weight: 600;
+}
+ul,ol,li{
+  list-style: none;
+  padding: 0;
+}
+.inner{
+  max-width: 1392px;
+  width: 95%; margin: auto;
+}
+.title{
+  font-size: $title-size;
+  text-align: center;
+  margin-top: 73px;
+  margin-bottom: 21px;
+  font-weight: 600;
+}
