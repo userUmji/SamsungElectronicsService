@@ -51,9 +51,10 @@
 
 | 서비스 Tip 섹션                                                                                                          | 
 | :------------------------------------------------------------------------------------------------------------------------------ |
-| <img width="1906" height="606" alt="Image" src="https://github.com/user-attachments/assets/00e8d9d9-7ce3-4878-96d9-7bb38194ac62" />  |  
-1.  슬라이드 naxt, prev 버튼을 양옆 inner값에 맞추기 위해 position을 변경해 봤지만 overflow때문에 보이지 않는 문제점 발생했습니다.
-2.  각 버튼을 swiper 자식이 아닌 그 상위 inner의 자식으로 할당하고 javaScript로 경로를 바꿔줌으로써 문제를 해결하였습니다.
+| ![Image](https://github.com/user-attachments/assets/77094d12-7d34-454c-8940-c090645e0fbc)  |  
+1.  슬라이드에 마우스 호버시 이미지가 밖으로 튀어나오는 듯한 느낌을 주어 사용자 
+2.  슬라이드 naxt, prev 버튼을 양옆 inner값에 맞추기 위해 position을 변경해 봤지만 overflow때문에 보이지 않는 문제점 발생했습니다.
+3.  각 버튼을 swiper 자식이 아닌 그 상위 inner의 자식으로 할당하고 javaScript로 경로를 바꿔줌으로써 문제를 해결하였습니다.
 <br/>
 </br>  
 
