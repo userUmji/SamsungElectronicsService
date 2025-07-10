@@ -359,6 +359,8 @@ header .mobile-nav .mobile-etc-menu a {
 .search-wrap .search-wrap-inner .inner .input-search {
   position: relative;
   margin-top: 30px;
+  -webkit-appearance: none;
+  -moz-appearance: none;
 }
 .search-wrap .search-wrap-inner .inner .input-search input {
   width: 100%;
@@ -573,6 +575,8 @@ header .mobile-nav .mobile-etc-menu a {
   padding-left: 30px;
   border: 1px solid #767676;
   font-size: 15px;
+  -webkit-appearance: none;
+  -moz-appearance: none;
 }
 .main-search .inner .input-wrap button {
   position: absolute;

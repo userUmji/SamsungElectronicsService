@@ -328,7 +328,8 @@ header {
       .input-search {
         position: relative;
         margin-top: 30px;
-
+        -webkit-appearance: none;
+        -moz-appearance: none;
         input {
           width: 100%;
           height: 60px;
@@ -560,6 +561,8 @@ header {
         padding-left: 30px;
         border: 1px solid $dark-gray;
         font-size: 15px;
+        -webkit-appearance: none;
+        -moz-appearance: none;
       }
 
       button {
