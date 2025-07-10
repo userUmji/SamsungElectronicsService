@@ -40,15 +40,31 @@
 
 ---
 
-## 3 주요 기능 소개
-### PC 네비게이션
+## 3 주요 기능 소개  
+| 메인 메뉴                                                                                                          | 
+| :------------------------------------------------------------------------------------------------------------------------------ |
+| ![Image](https://github.com/user-attachments/assets/a9eb7bd6-10ad-4a85-81e5-22e458fcab7c) |  
+1. 메뉴에 마우스를 가져다 다면 파란 박스(markBar)가 그 메뉴 위치로 이동합니다.  
+2. getBoundingClientRect()를 사용해서 메뉴 슬라이드의 left값을 받아오고 그값을 markBar에 주는 방식으로 구현하였습니다.
+<br/>
+</br>
 
-1. 메인 메뉴  
-![Image](https://github.com/user-attachments/assets/a9eb7bd6-10ad-4a85-81e5-22e458fcab7c)  
-2. 서비스 Tip 섹션  
-<img width="1906" height="606" alt="Image" src="https://github.com/user-attachments/assets/00e8d9d9-7ce3-4878-96d9-7bb38194ac62" />  
-3. 사이드 메뉴  
-![Image](https://github.com/user-attachments/assets/9525e492-cb42-4f64-95b6-6d7267c60b4a)  
+| 서비스 Tip 섹션                                                                                                          | 
+| :------------------------------------------------------------------------------------------------------------------------------ |
+| <img width="1906" height="606" alt="Image" src="https://github.com/user-attachments/assets/00e8d9d9-7ce3-4878-96d9-7bb38194ac62" />  |  
+1.  슬라이드 naxt, prev 버튼을 양옆 inner값에 맞추기 위해 position을 변경해 봤지만 overflow때문에 보이지 않는 문제점 발생했습니다.
+2.  각 버튼을 swiper 자식이 아닌 그 상위 inner의 자식으로 할당하고 javaScript로 경로를 바꿔줌으로써 문제를 해결하였습니다.
+<br/>
+</br>  
+
+| 사이드 메뉴                                                                                                          | 
+| :------------------------------------------------------------------------------------------------------------------------------ |
+| ![Image](https://github.com/user-attachments/assets/9525e492-cb42-4f64-95b6-6d7267c60b4a)  |
+1. 사이드 메뉴들이 평소엔 fixed로 화면을 따라다니지만 특정 구간에 도달하면 위치가 멈춥니다.
+2. window이벤트 scroll을 적용하여 scrollY가 특정 구간일때 fixed를 absolute로 변경하여 자연스럽게 멈추는 것처럼 구현하였습니다.
+<br/>
+</br>  
+
 ---
 
 ## 4. 작업 환경
