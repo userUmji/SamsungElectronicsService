@@ -53,7 +53,6 @@ header {
         li {
           a {
             position: relative;
-
             &::after {
               content: "";
               position: absolute;
@@ -164,7 +163,28 @@ header {
             margin-top: 24px;
 
             > li {
+              position: relative;
               margin-bottom: 9px;
+              a{
+                transition: 0.3s;
+              }
+              &::after{
+                content: '';
+                position: absolute;
+                width: 0%; height: 1px;
+                background-color: white;
+                left: 0; bottom: 0;
+                transition: 0.3s;
+              }
+              &:hover{
+                a{
+                  font-weight: 600;
+                }
+                &::after{
+                  width: 100%;
+                }
+              }
+            
             }
           }
         }

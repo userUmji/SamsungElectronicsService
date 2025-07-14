@@ -222,7 +222,29 @@ header .sub-menus-wrap .inner .sub-menus > li ul.sub-menu-down {
   margin-top: 24px;
 }
 header .sub-menus-wrap .inner .sub-menus > li ul.sub-menu-down > li {
+  position: relative;
   margin-bottom: 9px;
+}
+header .sub-menus-wrap .inner .sub-menus > li ul.sub-menu-down > li a {
+  -webkit-transition: 0.3s;
+  transition: 0.3s;
+}
+header .sub-menus-wrap .inner .sub-menus > li ul.sub-menu-down > li::after {
+  content: "";
+  position: absolute;
+  width: 0%;
+  height: 1px;
+  background-color: white;
+  left: 0;
+  bottom: 0;
+  -webkit-transition: 0.3s;
+  transition: 0.3s;
+}
+header .sub-menus-wrap .inner .sub-menus > li ul.sub-menu-down > li:hover a {
+  font-weight: 600;
+}
+header .sub-menus-wrap .inner .sub-menus > li ul.sub-menu-down > li:hover::after {
+  width: 100%;
 }
 header .mobile-nav {
   background-color: white;
