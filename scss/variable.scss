@@ -4,4 +4,33 @@ $dark-gray: #767676;
 $product-purple: #cb5cf4;
 $product-blue: #00b3e3;
 $product-green: #86de09;
+$main-color: rgb(3, 129, 254);
 $title-size: 34px;
+$sub-title-size: 28px;
+
+// account.scss에서 사용
+// 기본 값
+:root{
+  --tag-color: rgb(252, 252, 252);
+  --body-background: rgb(242, 242, 242);
+  --font-color: black;
+  --login-btn: rgb(229, 229, 229);
+  --login-btn-hover: rgb(204, 204, 204);
+  --title-warp-color: #333333;
+  --input-warp-color: rgba(140, 140, 140, 0.7);
+  --logo-invert: 0;
+}
+
+// 브라우저 다크 모드에서 색 변경
+@media(prefers-color-scheme: dark){
+  :root{
+    --tag-color: rgb(23, 23, 23);
+    --body-background: black;
+    --font-color: white;
+    --login-btn: rgb(48, 48, 48);
+    --login-btn-hover: rgb(40, 40, 40);
+    --title-warp-color: rgb(221, 221, 221);
+    --input-warp-color: rgba(255, 255, 255, 0.7);
+    --logo-invert: 1;
+  }
+}

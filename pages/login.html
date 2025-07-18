@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>삼성전자서비스</title>
+  <!-- 파비콘 -->
+  <link rel="icon" href="../images/samsung-favicon-img.png">
+  <!-- css -->
+  <link rel="stylesheet" href="../css/index.css">
+  <link rel="stylesheet" href="../css/login.css">
+  <!-- bootstrap -->
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.7.1/font/bootstrap-icons.css">
+</head>
+
+<body>
+  <!-- ----------- header ----------- -->
+  <header id="header" class="header"></header>
+  <!-- ----------- search-wrap ----------- -->
+  <div id="search-wrap" class="search-wrap"></div>
+  <main>
+    <div class="banner-consult">
+      <div class="inner">
+        <img src="../images/icon-door-to-door-img.png" alt="map-icon">
+        <ul>
+          <li>
+            <strong>삼성 계정(Samsung Account)</strong>으로 로그인 후 삼성전자서비스에서 제공하는 다양한 서비스를 이용해 보십시요.
+          </li>
+          <li>
+            24년 1월 1일 부터카카오/네이버 로그인은 지원되지 않으니, 삼성계정 가입 후 이용 바랍니다.
+          </li>
+          <li>
+            출장서비스 예약, 이메일 상담, 소모품샵 자재/상품 구매는 <strong>삼성계정 로그인 후 이용</strong> 가능합니다.
+          </li>
+          <li>
+            24년 1월 1일 부터 기존 회원 운영 종료로 보유제품 정보는 제공되지 않습니다.
+          </li>
+        </ul>
+      </div>
+    </div>
+    <div class="member-login">
+      <div class="inner">
+        <h2 class="sub-title">로그인</h2>
+        <div class="member-login-list">
+          <div>
+            <div class="btn-box">
+              <button onclick="showSectionFromLink('login')">
+                <span>삼성 계정(Samsung Account)으로 로그인</span>
+              </button>
+            </div>
+            <div class="btn-wrap">
+              <button class="find-id-btn" onclick="showSectionFromLink('find-id')">계정 ID 찾기</button>
+              <button class="find-passward" onclick="showSectionFromLink('find-passward')">비밀번호 찾기</button>
+              <button class="sign-up" onclick="showSectionFromLink('sign-up')">삼성계정 가입</button>
+            </div>
+          </div>
+          <div class="hide hide-div">
+            <div class="btn-line-box">
+              <button><span>소모품샵 비회원 로그인</span></button>
+              <p>※ 2023/2/1일 이전 비회원 주문건만 확인 가능합니다.</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </main>
+  <!-- ----------- footer ----------- -->
+  <footer id="footer"></footer>
+  <!-- js -->
+  <script src="../js/load-common.js"></script>
+  <script src="../js/login.js"></script>
+</body>
+
+</html>

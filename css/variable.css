@@ -1,0 +1,23 @@
+:root {
+  --tag-color: rgb(252, 252, 252);
+  --body-background: rgb(242, 242, 242);
+  --font-color: black;
+  --login-btn: rgb(229, 229, 229);
+  --login-btn-hover: rgb(204, 204, 204);
+  --title-warp-color: #333333;
+  --input-warp-color: rgba(140, 140, 140, 0.7);
+  --logo-invert: 0;
+}
+
+@media (prefers-color-scheme: dark) {
+  :root {
+    --tag-color: rgb(23, 23, 23);
+    --body-background: black;
+    --font-color: white;
+    --login-btn: rgb(48, 48, 48);
+    --login-btn-hover: rgb(40, 40, 40);
+    --title-warp-color: rgb(221, 221, 221);
+    --input-warp-color: rgba(255, 255, 255, 0.7);
+    --logo-invert: 1;
+  }
+}

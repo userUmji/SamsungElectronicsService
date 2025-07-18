@@ -1,6 +1,29 @@
 @charset "UTF-8";
-/*폰트*/
 @import url("https://fonts.cdnfonts.com/css/samsungone");
+@media (prefers-color-scheme: dark) {
+  :root {
+    --tag-color: rgb(23, 23, 23);
+    --body-background: black;
+    --font-color: white;
+    --login-btn: rgb(48, 48, 48);
+    --login-btn-hover: rgb(40, 40, 40);
+    --title-warp-color: rgb(221, 221, 221);
+    --input-warp-color: rgba(255, 255, 255, 0.7);
+    --logo-invert: 1;
+  }
+}
+@media (prefers-color-scheme: light) {
+  :root {
+    --tag-color: rgb(252, 252, 252);
+    --body-background: rgb(242, 242, 242);
+    --font-color: black;
+    --login-btn: rgb(229, 229, 229);
+    --login-btn-hover: rgb(204, 204, 204);
+    --title-warp-color: #333333;
+    --input-warp-color: rgba(140, 140, 140, 0.7);
+    --logo-invert: 0;
+  }
+}
 * {
   margin: 0;
   padding: 0;
@@ -50,6 +73,14 @@ ul, ol, li {
   text-align: center;
   margin-top: 73px;
   margin-bottom: 21px;
+  font-weight: 600;
+}
+
+.sub-title {
+  font-size: 28px;
+  text-align: center;
+  margin-top: 74px;
+  margin-bottom: 19px;
   font-weight: 600;
 }
 
@@ -140,26 +171,27 @@ header .inner .icon-wrap {
   display: flex;
   gap: 24px;
 }
-header .inner .icon-wrap button {
+header .inner .icon-wrap button, header .inner .icon-wrap a {
   font-size: 1.5rem;
 }
-header .inner .icon-wrap button.shopping-cart-btn {
+header .inner .icon-wrap button.shopping-cart-btn, header .inner .icon-wrap a.shopping-cart-btn {
   position: relative;
 }
-header .inner .icon-wrap button.shopping-cart-btn::before {
+header .inner .icon-wrap button.shopping-cart-btn::before, header .inner .icon-wrap a.shopping-cart-btn::before {
   content: "0";
   color: white;
   font-size: 11px;
   position: absolute;
-  top: -9px;
-  right: -9px;
+  top: -5px;
+  right: -7px;
   width: 19px;
   height: 19px;
+  text-align: center;
   line-height: 18px;
   background-color: black;
   border-radius: 50%;
 }
-header .inner .icon-wrap button.hamburger-btn {
+header .inner .icon-wrap button.hamburger-btn, header .inner .icon-wrap a.hamburger-btn {
   display: none;
 }
 header .sub-menus-wrap {
@@ -1591,13 +1623,13 @@ footer .top-btn i {
   header .inner nav {
     display: none;
   }
-  header .inner .icon-wrap button.shopping-cart-btn, header .inner .icon-wrap button.mypage-btn {
+  header .inner .icon-wrap button.shopping-cart-btn, header .inner .icon-wrap button.mypage-btn, header .inner .icon-wrap a.shopping-cart-btn, header .inner .icon-wrap a.mypage-btn {
     display: none;
   }
-  header .inner .icon-wrap button.search-view-open-btn {
+  header .inner .icon-wrap button.search-view-open-btn, header .inner .icon-wrap a.search-view-open-btn {
     font-size: 1.4rem;
   }
-  header .inner .icon-wrap button.hamburger-btn {
+  header .inner .icon-wrap button.hamburger-btn, header .inner .icon-wrap a.hamburger-btn {
     display: block;
     font-size: 1.8rem;
   }

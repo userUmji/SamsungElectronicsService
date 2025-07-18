@@ -1,0 +1,179 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>삼성계정</title>
+  <!-- 파비콘 -->
+  <link rel="icon" href="../images/samsung-favicon-img.png">
+  <!-- css -->
+  <link rel="stylesheet" href="../css/account.css">
+  <!-- bootstrap -->
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.7.1/font/bootstrap-icons.css">
+</head>
+
+<body>
+  <!-- ----------- header ----------- -->
+  <header>
+    <div class="header-wrap">
+      <img src="../images/logo-img.svg" alt="logo-img">
+    </div>
+  </header>
+  <main>
+    <div class="box-wrap">
+      <!-- 삼성계정 로그인 눌렀을때 -->
+      <form id="samsung-login">
+        <div class="title-wrap">
+          <p>
+            하나의 계정으로, 모든 기기에서,<br>
+            나만을 위한 서비스를!
+          </p>
+          <p>삼성 계정에 로그인하세요.</p>
+        </div>
+        <div class="body-wrap">
+          <label for="input-id" class="input-wrap">
+            <input type="text" id="input-id">
+          </label>
+          <label for="remember-id" class="remember-id">
+            <input type="checkbox" id="remember-id">
+            <span class="check-mark"></span>
+            <span>ID 기억하기</span>
+          </label>
+          <button type="submit" class="submit-btn">
+            다음
+          </button>
+          <div>
+            <a href="#none">ID 찾기</a>
+          </div>
+          <div>
+            <a href="#none">계정 생성</a>
+          </div>
+          <button class="login-btn">
+            <div class="icon-warp">
+              <img src="../images/google-logo-img.svg" alt="google-logo-img">
+            </div>
+            <p>Google 계정으로 로그인</p>
+          </button>
+          <button class="login-btn qr-code">
+            <div class="icon-warp">
+              <img src="../images/qr-img.svg" alt="qr-img">
+            </div>
+            <p>QR 코드로 로그인</p>
+          </button>
+        </div>
+      </form>
+      <!-- 아이디 찾기 눌렀을때 -->
+      <form id="find-id">
+        <div class="title-wrap">
+          <p>내 계정 ID 찾기</p>
+          <p>아래의 정보를 입력해 주세요.</p>
+        </div>
+        <div class="family-name">
+          <label for="input-family-name" class="input-wrap">
+            <input type="text" id="input-family-name">
+          </label>
+        </div>
+        <div class="name">
+          <label for="input-name" class="input-wrap">
+            <input type="text" id="input-name">
+          </label>
+        </div>
+        <div class="user-birth">
+          <label for="input-year" class="input-wrap">
+            <input type="text" id="input-year">
+          </label>
+          <label for="input-month" class="input-wrap">
+            <select>
+              <option value="none" disabled selected hidden></option>
+              <option value="0">1월</option>
+              <option value="1">2월</option>
+              <option value="2">3월</option>
+              <option value="3">4월</option>
+              <option value="4">5월</option>
+              <option value="5">6월</option>
+              <option value="6">7월</option>
+              <option value="7">8월</option>
+              <option value="8">9월</option>
+              <option value="9">10월</option>
+              <option value="10">11월</option>
+              <option value="11">12월</option>
+            </select>
+          </label>
+          <label for="input-day" class="input-wrap">
+            <input type="text" id="input-day">
+          </label>
+        </div>
+        <button type="submit" class="submit-btn">
+          계속
+        </button>
+      </form>
+      <!-- 비밀번호 찾기 눌렀을때 -->
+      <form id="find-passward">
+        <div class="title-wrap">
+          <p>비밀번호 재설정</p>
+          <p>비밀번호를 재설정하려면 아래에 내 계정 ID를 입력하세요.</p>
+        </div>
+        <label for="reseting-password" class="input-wrap">
+          <input type="text" id="reseting-password">
+        </label>
+        <button type="submit" class="submit-btn">
+          계속
+        </button>
+      </form>
+      <!-- 을때 -->
+      <div id="sign-up">
+        <div class="title-wrap">
+          <p>삼성계정 하나면 충분합니다.</p>
+          <p>한번의 가입으로 언제 어디서나 삼성 서비스를 즐기실 수 있습니다.</p>
+        </div>
+        <div class="btn-warp">
+          <button>본인용 계정 만들기</button>
+          <button>14세 미만 아동용 계정 만들기</button>
+        </div>
+        </d>
+      </div>
+  </main>
+  <!-- ----------- footer ----------- -->
+  <footer>
+    <div class="footer-wrap">
+      <div class="footer-links">
+        <a href="#none">이용약관</a>
+        <a href="#none">개인정보 처리방침</a>
+        <a href="#none">공지</a>
+        <a href="#none">문의하기</a>
+      </div>
+      <div class="copyright-info">
+        <img src="../images/logo-img.svg" alt="logo-img">
+        <p>Copyright © 1995-2025 Samsung. All Rights Reserved.</p>
+      </div>
+    </div>
+    <div class="anchor">
+      <div class="anchor-warp">
+        <div class="anchor-img">
+          <img src="../images/anchor-logo-img.png" alt="anchor-logo-img">
+          <div class="anchor-text-wrap">
+            <a href="#none">개인정보 보호</a>
+            <span>-</span>
+            <a href="#none">약관</a>
+          </div>
+        </div>
+        <div class="anchor-text-wrap">
+          <span>
+            <strong>reCAPTCHA</strong>로 보호됨
+          </span>
+          <div class="link-warp">
+            <a href="#none">개인정보 보호</a>
+            <span>-</span>
+            <a href="#none">약관</a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </footer>
+  <!-- js -->
+  <script src="../js/account.js"></script>
+</body>
+
+</html>

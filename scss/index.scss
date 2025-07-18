@@ -77,25 +77,24 @@ header {
       display: flex;
       gap: 24px;
 
-      button {
+      button,a {
         font-size: 1.5rem;
-
         &.shopping-cart-btn {
           position: relative;
-        }
-
-        &.shopping-cart-btn::before {
-          content: "0";
-          color: white;
-          font-size: 11px;
-          position: absolute;
-          top: -9px;
-          right: -9px;
-          width: 19px;
-          height: 19px;
-          line-height: 18px;
-          background-color: black;
-          border-radius: 50%;
+          &::before {
+            content: "0";
+            color: white;
+            font-size: 11px;
+            position: absolute;
+            top: -5px;
+            right: -7px;
+            width: 19px;
+            height: 19px;
+            text-align: center;
+            line-height: 18px;
+            background-color: black;
+            border-radius: 50%;
+          }
         }
 
         &.hamburger-btn {
@@ -1704,7 +1703,7 @@ footer {
       }
 
       .icon-wrap {
-        button {
+        button,a {
           &.shopping-cart-btn,
           &.mypage-btn {
             display: none;

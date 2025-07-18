@@ -1,0 +1,257 @@
+@import url("https://fonts.cdnfonts.com/css/samsungone");
+:root {
+  --tag-color: rgb(252, 252, 252);
+  --body-background: rgb(242, 242, 242);
+  --font-color: black;
+  --login-btn: rgb(229, 229, 229);
+  --login-btn-hover: rgb(204, 204, 204);
+  --title-warp-color: #333333;
+  --input-warp-color: rgba(140, 140, 140, 0.7);
+  --logo-invert: 0;
+}
+
+@media (prefers-color-scheme: dark) {
+  :root {
+    --tag-color: rgb(23, 23, 23);
+    --body-background: black;
+    --font-color: white;
+    --login-btn: rgb(48, 48, 48);
+    --login-btn-hover: rgb(40, 40, 40);
+    --title-warp-color: rgb(221, 221, 221);
+    --input-warp-color: rgba(255, 255, 255, 0.7);
+    --logo-invert: 1;
+  }
+}
+* {
+  margin: 0;
+  padding: 0;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  font-family: "SamsungOne", sans-serif;
+  font-size: 15px;
+  overflow-x: hidden;
+}
+
+button {
+  cursor: pointer;
+  border: none;
+  background-color: transparent;
+  font-size: 1rem;
+}
+
+a {
+  text-decoration: none;
+  color: black;
+}
+
+strong {
+  font-weight: 600;
+}
+
+ul, ol, li {
+  list-style: none;
+  padding: 0;
+}
+
+.inner {
+  max-width: 1392px;
+  width: 95%;
+  margin: auto;
+}
+
+.title {
+  font-size: 34px;
+  text-align: center;
+  margin-top: 73px;
+  margin-bottom: 21px;
+  font-weight: 600;
+}
+
+.sub-title {
+  font-size: 28px;
+  text-align: center;
+  margin-top: 74px;
+  margin-bottom: 19px;
+  font-weight: 600;
+}
+
+main {
+  margin-top: 77px;
+  padding-top: 50px;
+}
+
+/*----------- banner-consult -----------*/
+.banner-consult {
+  margin-top: 26px;
+}
+.banner-consult .inner {
+  position: relative;
+  padding: 35px 200px 35px 160px;
+  border-radius: 20px;
+  background-color: #f7f7f7;
+  border: 1px solid #ddd;
+}
+.banner-consult .inner ul li {
+  position: relative;
+  padding-left: 12px;
+  font-size: 15px;
+  line-height: 1.5;
+}
+.banner-consult .inner ul li::before {
+  content: "";
+  position: absolute;
+  top: 9px;
+  left: 0;
+  width: 4px;
+  height: 4px;
+  border-radius: 50%;
+  background-color: black;
+}
+.banner-consult .inner ul li strong {
+  color: #0072de;
+}
+
+/*----------- member-login -----------*/
+.member-login .inner .sub-title {
+  text-align: left;
+}
+.member-login .inner .member-login-list {
+  margin-top: 25px;
+  padding: 10px 20%;
+  border-radius: 20px;
+  border: 1px solid #ddd;
+}
+.member-login .inner .member-login-list > div {
+  padding: 30px 0;
+}
+.member-login .inner .member-login-list > div > div {
+  max-width: 448px;
+  margin: 0 auto;
+}
+.member-login .inner .member-login-list > div.hide-div {
+  height: 0;
+  padding: 0;
+  margin-top: 60px;
+  overflow: hidden;
+}
+.member-login .inner .member-login-list > div .btn-box button {
+  display: inline-block;
+  height: 50px;
+  min-width: 130px;
+  width: 100%;
+  border-radius: 50px;
+  background-color: black;
+  color: white;
+  text-align: center;
+}
+.member-login .inner .member-login-list > div .btn-box button span {
+  display: block;
+  width: 75%;
+  font-weight: 500;
+  margin: auto;
+  font-size: 15px;
+}
+.member-login .inner .member-login-list > div .btn-wrap {
+  margin-top: 15px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  gap: 15px;
+}
+.member-login .inner .member-login-list > div .btn-wrap button {
+  display: inline-block;
+  border-radius: 40px;
+  -webkit-box-flex: 1;
+      -ms-flex: 1;
+          flex: 1;
+  height: 40px;
+  min-width: 96px;
+  border: 1px solid black;
+  font-size: 14px;
+  font-weight: 500;
+  text-align: center;
+  line-height: 40px;
+}
+.member-login .inner .member-login-list > div .btn-line-box {
+  text-align: center;
+}
+.member-login .inner .member-login-list > div .btn-line-box button {
+  border-bottom: 2px solid black;
+  font-size: 15px;
+  font-weight: 500;
+}
+.member-login .inner .member-login-list > div .btn-line-box p {
+  margin-top: 10px;
+  margin-bottom: 5px;
+}
+
+@media (min-width: 1024px) {
+  /*----------- banner-consult -----------*/
+  .banner-consult .inner img {
+    position: absolute;
+    left: 40px;
+    top: 50%;
+    -webkit-transform: translateY(-50%);
+            transform: translateY(-50%);
+  }
+  /*----------- footer -----------*/
+  footer .app-floating-btn {
+    position: absolute;
+    bottom: calc(100% + 150px);
+  }
+}
+@media (max-width: 1023px) {
+  main {
+    margin-top: 61px;
+    padding-top: 40px;
+  }
+  /*----------- banner-consult -----------*/
+  .banner-consult {
+    margin-top: 22px;
+  }
+  .banner-consult .inner {
+    padding: 30px;
+    border-radius: 10px;
+  }
+  .banner-consult .inner img {
+    display: block;
+    margin: 0 auto 16px auto;
+    position: inherit;
+  }
+  /*----------- member-login -----------*/
+  .member-login .inner .sub-title {
+    margin-top: 54px;
+    margin-bottom: 21px;
+    font-size: 24px;
+  }
+  .member-login .inner .member-login-list {
+    padding: 10px 20px;
+    border-radius: 10px;
+  }
+  .member-login .inner .member-login-list > div > div {
+    max-width: 100%;
+  }
+  .member-login .inner .member-login-list > div .btn-wrap {
+    margin-top: 10px;
+    gap: 10px;
+  }
+  .member-login .inner .member-login-list > div .btn-wrap button {
+    -webkit-transition: 0.3s;
+    transition: 0.3s;
+  }
+  .member-login .inner .member-login-list > div .btn-wrap button:nth-child(3) {
+    -webkit-box-flex: 1;
+        -ms-flex: auto;
+            flex: auto;
+    width: 100%;
+  }
+}

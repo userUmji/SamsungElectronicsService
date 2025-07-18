@@ -1,0 +1,676 @@
+@charset "UTF-8";
+@import url("https://fonts.cdnfonts.com/css/samsungone");
+:root {
+  --tag-color: rgb(252, 252, 252);
+  --body-background: rgb(242, 242, 242);
+  --font-color: black;
+  --login-btn: rgb(229, 229, 229);
+  --login-btn-hover: rgb(204, 204, 204);
+  --title-warp-color: #333333;
+  --input-warp-color: rgba(140, 140, 140, 0.7);
+  --logo-invert: 0;
+}
+
+@media (prefers-color-scheme: dark) {
+  :root {
+    --tag-color: rgb(23, 23, 23);
+    --body-background: black;
+    --font-color: white;
+    --login-btn: rgb(48, 48, 48);
+    --login-btn-hover: rgb(40, 40, 40);
+    --title-warp-color: rgb(221, 221, 221);
+    --input-warp-color: rgba(255, 255, 255, 0.7);
+    --logo-invert: 1;
+  }
+}
+* {
+  margin: 0;
+  padding: 0;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  font-family: "SamsungOne", sans-serif;
+  font-size: 15px;
+  overflow-x: hidden;
+}
+
+button {
+  cursor: pointer;
+  border: none;
+  background-color: transparent;
+  font-size: 1rem;
+}
+
+a {
+  text-decoration: none;
+  color: black;
+}
+
+strong {
+  font-weight: 600;
+}
+
+ul, ol, li {
+  list-style: none;
+  padding: 0;
+}
+
+.inner {
+  max-width: 1392px;
+  width: 95%;
+  margin: auto;
+}
+
+.title {
+  font-size: 34px;
+  text-align: center;
+  margin-top: 73px;
+  margin-bottom: 21px;
+  font-weight: 600;
+}
+
+.sub-title {
+  font-size: 28px;
+  text-align: center;
+  margin-top: 74px;
+  margin-bottom: 19px;
+  font-weight: 600;
+}
+
+/*----------- body -----------*/
+body {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  color: var(--font-color);
+  background-color: var(--body-background);
+  min-height: 100vh;
+  height: 100%;
+}
+
+/*----------- header -----------*/
+header {
+  height: 90px;
+  padding: 33px 128px;
+  background-color: var(--tag-color);
+}
+header .header-wrap img {
+  -webkit-filter: invert(var(--logo-invert));
+          filter: invert(var(--logo-invert));
+}
+
+/*----------- main -----------*/
+main {
+  padding-top: 48px;
+  background-color: var(--body-background);
+  -webkit-box-flex: 8;
+      -ms-flex: 8;
+          flex: 8;
+}
+main .box-wrap {
+  min-width: 280px;
+  width: 640px;
+  background-color: var(--tag-color);
+  border-radius: 26px;
+  margin: auto;
+}
+main .box-wrap > form, main .box-wrap > div {
+  display: none;
+}
+main .box-wrap > form.active, main .box-wrap > div.active {
+  display: block;
+}
+main .box-wrap #samsung-login {
+  padding: 72px 140px;
+  text-align: center;
+}
+.title-wrap p:nth-child(1) {
+  font-weight: 500;
+  line-height: 36px;
+  font-size: 25px;
+}
+.title-wrap p:nth-child(2) {
+  font-size: 17px;
+  color: var(--title-warp-color);
+}
+
+main .box-wrap #samsung-login .body-wrap {
+  width: 100%;
+  margin-top: 120px;
+}
+.input-wrap {
+  position: relative;
+  display: block;
+  width: 100%;
+  cursor: text;
+  border-bottom: 1px solid var(--input-warp-color);
+}
+.input-wrap::after {
+  content: "이메일 주소 또는 전화번호";
+  position: absolute;
+  width: 100%;
+  left: 0;
+  bottom: 10px;
+  text-align: left;
+  font-size: 17px;
+  color: var(--input-warp-color);
+  -webkit-transition: 0.3s;
+  transition: 0.3s;
+}
+.input-wrap::before {
+  content: "";
+  position: absolute;
+  width: 0;
+  height: 2px;
+  bottom: -1px;
+  left: 50%;
+  -webkit-transform: translateX(-50%);
+          transform: translateX(-50%);
+  background-color: rgb(3, 129, 254);
+  -webkit-transition: 0.3s;
+  transition: 0.3s;
+}
+.input-wrap:focus-within::after {
+  color: rgb(3, 129, 254);
+  font-size: 14px;
+  bottom: 100%;
+}
+.input-wrap:focus-within::before {
+  width: 100%;
+  background-color: rgb(3, 129, 254);
+}
+.input-wrap input {
+  background-color: transparent;
+  border: none;
+  font-size: 18px;
+  padding-bottom: 10px;
+  color: white;
+  width: 100%;
+  outline: none;
+}
+
+main .box-wrap #samsung-login .body-wrap .remember-id {
+  display: block;
+  text-align: left;
+  padding-top: 4px;
+  padding-left: 8px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  gap: 8px;
+  cursor: pointer;
+}
+main .box-wrap #samsung-login .body-wrap .remember-id input {
+  display: none;
+}
+main .box-wrap #samsung-login .body-wrap .remember-id input:checked + .check-mark {
+  background-color: rgb(3, 129, 254);
+  border-color: transparent;
+}
+main .box-wrap #samsung-login .body-wrap .remember-id input:checked + .check-mark::after {
+  content: "";
+  position: absolute;
+  width: 30%;
+  height: 2px;
+  background-color: var(--body-background);
+  left: 2px;
+  top: 50%;
+  -webkit-transform: rotate(45deg);
+          transform: rotate(45deg);
+}
+main .box-wrap #samsung-login .body-wrap .remember-id input:checked + .check-mark::before {
+  content: "";
+  position: absolute;
+  width: 60%;
+  height: 2px;
+  background-color: var(--body-background);
+  right: 1px;
+  top: 50%;
+  -webkit-transform: rotate(-45deg);
+          transform: rotate(-45deg);
+}
+main .box-wrap #samsung-login .body-wrap .remember-id .check-mark {
+  position: relative;
+  display: inline-block;
+  width: 18px;
+  height: 18px;
+  border: 1px solid var(--input-warp-color);
+  border-radius: 50%;
+}
+main .box-wrap #samsung-login .body-wrap .remember-id span {
+  font-weight: 500;
+}
+main .box-wrap #samsung-login .body-wrap .submit-btn {
+  width: 100%;
+  height: 44px;
+  border-radius: 130px;
+  margin-top: 30px;
+  color: white;
+  background-color: rgb(3, 129, 254);
+  opacity: 0.4;
+  pointer-events: none;
+}
+main .box-wrap #samsung-login .body-wrap .submit-btn.active {
+  pointer-events: inherit;
+  opacity: 1;
+}
+main .box-wrap #samsung-login .body-wrap > div {
+  text-align: left;
+  margin-top: 24px;
+}
+main .box-wrap #samsung-login .body-wrap > div a {
+  color: rgb(169, 169, 169);
+  text-decoration: underline;
+  font-weight: 600;
+}
+main .box-wrap #samsung-login .body-wrap .login-btn {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  width: 100%;
+  background-color: var(--login-btn);
+  border-radius: 130px;
+  margin-top: 24px;
+  padding: 2px 0;
+  -webkit-transition: 0.3s;
+  transition: 0.3s;
+}
+main .box-wrap #samsung-login .body-wrap .login-btn:hover {
+  background-color: var(--login-btn-hover);
+}
+main .box-wrap #samsung-login .body-wrap .login-btn.qr-code {
+  margin-top: 16px;
+}
+main .box-wrap #samsung-login .body-wrap .login-btn .icon-warp {
+  margin-left: 5px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+main .box-wrap #samsung-login .body-wrap .login-btn p {
+  line-height: 40px;
+  width: 100%;
+  font-weight: 600;
+  text-align: center;
+  color: var(--font-color);
+  padding-right: 12px;
+}
+main .box-wrap #find-id {
+  padding: 60px 72px 48px;
+}
+main .box-wrap #find-id .title-wrap p:nth-child(1) {
+  font-weight: 300;
+  line-height: 40px;
+  font-size: 30px;
+}
+main .box-wrap #find-id .title-wrap p:nth-child(2) {
+  font-size: 15px;
+  font-weight: 500;
+  margin-top: 20px;
+  color: var(--font-color);
+}
+main .box-wrap #find-id .family-name {
+  margin-top: 60px;
+}
+main .box-wrap #find-id .family-name .input-wrap::after {
+  content: "성";
+}
+main .box-wrap #find-id .name {
+  margin-top: 40px;
+}
+main .box-wrap #find-id .name .input-wrap::after {
+  content: "이름";
+}
+main .box-wrap #find-id .user-birth {
+  margin-top: 40px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  gap: 8px;
+}
+main .box-wrap #find-id .user-birth .input-wrap:nth-child(1)::after {
+  content: "년";
+}
+main .box-wrap #find-id .user-birth .input-wrap:nth-child(2) {
+  pointer-events: none;
+}
+main .box-wrap #find-id .user-birth .input-wrap:nth-child(2)::after {
+  content: "월";
+}
+main .box-wrap #find-id .user-birth .input-wrap:nth-child(2) select {
+  cursor: pointer;
+  pointer-events: all;
+  width: 100%;
+  height: 100%;
+  border: none;
+  background-color: var(--tag-color);
+  color: var(--font-color);
+  font-size: 16px;
+}
+main .box-wrap #find-id .user-birth .input-wrap:nth-child(3)::after {
+  content: "일";
+}
+main .box-wrap #find-id .submit-btn {
+  display: block;
+  margin: 72px auto 0 auto;
+  background-color: rgb(3, 129, 254);
+  color: white;
+  width: 100%;
+  max-width: 236px;
+  min-height: 44px;
+  border-radius: 130px;
+  opacity: 0.4;
+}
+main .box-wrap #find-passward {
+  padding: 60px 72px 48px;
+}
+main .box-wrap #find-passward .title-wrap p:nth-child(1) {
+  font-weight: 300;
+  line-height: 40px;
+  font-size: 30px;
+}
+main .box-wrap #find-passward .title-wrap p:nth-child(2) {
+  font-size: 15px;
+  font-weight: 500;
+  margin-top: 20px;
+  color: var(--font-color);
+}
+main .box-wrap #find-passward .input-wrap {
+  margin-top: 28px;
+}
+main .box-wrap #find-passward .submit-btn {
+  display: block;
+  margin: 72px auto 0 auto;
+  background-color: rgb(3, 129, 254);
+  color: white;
+  width: 100%;
+  max-width: 236px;
+  min-height: 44px;
+  border-radius: 130px;
+  opacity: 0.4;
+}
+main .box-wrap #sign-up {
+  padding: 72px 120px;
+  text-align: center;
+}
+main .box-wrap #sign-up .title-wrap p:nth-child(1) {
+  font-weight: 500;
+  line-height: 36px;
+  font-size: 25px;
+}
+main .box-wrap #sign-up .title-wrap p:nth-child(2) {
+  margin-top: 36px;
+  font-size: 14px;
+  color: var(--font-color);
+}
+main .box-wrap #sign-up .btn-warp {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  gap: 24px;
+  margin-top: 72px;
+}
+main .box-wrap #sign-up .btn-warp button {
+  width: 286px;
+  min-width: 236px;
+  min-height: 44px;
+  background-color: rgb(3, 129, 254);
+  color: white;
+  border-radius: 130px;
+  padding: 6px 16px;
+}
+
+/*----------- footer -----------*/
+footer {
+  background-color: var(--body-background);
+}
+footer .footer-wrap {
+  position: relative;
+  left: 50%;
+  bottom: 0;
+  -webkit-transform: translateX(-50%);
+          transform: translateX(-50%);
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-align: end;
+      -ms-flex-align: end;
+          align-items: flex-end;
+  max-width: 1440px;
+  padding: 26px 24px 48px;
+}
+footer .footer-wrap .footer-links {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  gap: 32px;
+}
+footer .footer-wrap .footer-links a {
+  color: var(--font-color);
+  font-size: 12px;
+}
+footer .footer-wrap .copyright-info {
+  text-align: right;
+}
+footer .footer-wrap .copyright-info img {
+  opacity: 0.56;
+  -webkit-filter: invert(var(--logo-invert));
+          filter: invert(var(--logo-invert));
+}
+footer .footer-wrap .copyright-info p {
+  font-size: 12px;
+  color: rgb(153, 153, 153);
+}
+footer .anchor {
+  border-radius: 5px 0 0 5px;
+  overflow: hidden;
+  position: fixed;
+  left: calc(100% - 70px);
+  bottom: 20px;
+  -webkit-transition: 0.3s;
+  transition: 0.3s;
+}
+footer .anchor:hover {
+  left: calc(100% - 256px);
+}
+footer .anchor .anchor-warp {
+  width: 256px;
+  height: 65px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+footer .anchor .anchor-warp .anchor-img {
+  width: 70px;
+  background-color: #f9f9f9;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+footer .anchor .anchor-warp .anchor-img img {
+  width: 40px;
+  height: 40px;
+}
+footer .anchor .anchor-warp .anchor-img .anchor-text-wrap {
+  margin-top: -5px;
+}
+footer .anchor .anchor-warp .anchor-img .anchor-text-wrap a,
+footer .anchor .anchor-warp .anchor-img .anchor-text-wrap span {
+  color: black;
+  font-size: 5px;
+}
+footer .anchor .anchor-warp > .anchor-text-wrap {
+  padding-top: 13px;
+  padding-left: 15px;
+  background-color: rgb(3, 129, 254);
+  width: calc(100% - 70px);
+}
+footer .anchor .anchor-warp > .anchor-text-wrap a {
+  color: white;
+}
+footer .anchor .anchor-warp > .anchor-text-wrap > span {
+  font-size: 13px;
+}
+footer .anchor .anchor-warp > .anchor-text-wrap .link-warp {
+  font-size: 11px;
+}
+footer .anchor .anchor-warp > .anchor-text-wrap .link-warp a:hover {
+  text-decoration: underline;
+}
+
+@media (max-width: 682px) {
+  body {
+    min-height: 100vh;
+  }
+  /*----------- header -----------*/
+  header {
+    height: 56px;
+    padding: 20.5px 24px;
+    background-color: transparent;
+  }
+  header .header-wrap img {
+    min-width: 88px;
+    height: 14px;
+    -webkit-filter: invert(var(--logo-invert));
+            filter: invert(var(--logo-invert));
+  }
+  /*----------- main -----------*/
+  main {
+    padding-top: 0;
+    width: 100%;
+    background-color: var(--body-background);
+  }
+  main .box-wrap {
+    width: 100%;
+    background-color: transparent;
+    padding: 0;
+  }
+  main .box-wrap #samsung-login {
+    padding: 72px 22px 0;
+    text-align: center;
+  }
+  main .box-wrap #samsung-login .title-wrap p:nth-child(1) {
+    font-size: 23px;
+  }
+  main .box-wrap #samsung-login .body-wrap {
+    width: 100%;
+    margin-top: 120px;
+  }
+  main .box-wrap #samsung-login .body-wrap .login-btn.qr-code {
+    display: none;
+    margin-top: 16px;
+  }
+  main .box-wrap #find-id {
+    padding: 30px 24px;
+  }
+  main .box-wrap #find-id .title-wrap p:nth-child(1) {
+    font-weight: 500;
+    line-height: 29px;
+    font-size: 22px;
+  }
+  main .box-wrap #find-id .submit-btn {
+    width: 216px;
+  }
+  main .box-wrap #find-passward {
+    padding: 30px 24px;
+  }
+  main .box-wrap #find-passward .title-wrap p:nth-child(1) {
+    font-weight: 500;
+    line-height: 29px;
+    font-size: 22px;
+  }
+  main .box-wrap #find-passward .submit-btn {
+    margin: 50px auto 0 auto;
+    max-width: 216px;
+  }
+  main .box-wrap #sign-up {
+    padding: 72px 22px 0;
+  }
+  main .box-wrap #sign-up .btn-warp {
+    gap: 12px;
+    margin-top: 20px;
+  }
+  /*----------- footer -----------*/
+  footer .footer-wrap {
+    position: inherit;
+    width: 100%;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    margin: auto;
+    -webkit-transform: translate(0);
+            transform: translate(0);
+    padding: 40px 24px;
+  }
+  footer .footer-wrap .footer-links {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    gap: 10px;
+  }
+  footer .footer-wrap .copyright-info {
+    margin-top: 22px;
+    text-align: center;
+  }
+  footer .footer-wrap .copyright-info img {
+    min-width: 101px;
+    height: 16px;
+  }
+  footer .footer-wrap .copyright-info p {
+    font-size: 10px;
+  }
+  footer .anchor {
+    bottom: 10px;
+    -webkit-transition: 0.3s;
+    transition: 0.3s;
+  }
+}

@@ -1,0 +1,562 @@
+@import "variable.scss", "reset.scss";
+/*----------- body -----------*/
+body {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  color: var(--font-color);
+  background-color: var(--body-background);
+  min-height: 100vh;
+  height: 100%;
+}
+/*----------- header -----------*/
+header {
+  height: 90px;
+  padding: 33px 128px;
+  background-color: var(--tag-color);
+  .header-wrap {
+    img {
+      filter:  unquote("invert(var(--logo-invert))");
+    }
+  }
+}
+/*----------- main -----------*/
+main {
+  padding-top: 48px;
+  background-color: var(--body-background);
+  flex: 8;
+  .box-wrap {
+    min-width: 280px;
+    width: 640px;
+    background-color: var(--tag-color);
+    border-radius: 26px;
+    margin: auto;
+    >form, >div{
+      display: none;
+      &.active{
+        display: block;
+      }
+    }
+    #samsung-login {
+      padding: 72px 140px;
+      text-align: center;
+      @at-root .title-wrap {
+        p {
+          &:nth-child(1) {
+            font-weight: 500;
+            line-height: 36px;
+            font-size: 25px;
+          }
+          &:nth-child(2) {
+            font-size: 17px;
+            color: var(--title-warp-color);
+          }
+        }
+      }
+      .body-wrap {
+        width: 100%;
+        margin-top: 120px;
+        @at-root .input-wrap {
+          position: relative;
+          display: block;
+          width: 100%;
+          cursor: text;
+          border-bottom: 1px solid var(--input-warp-color);
+          &::after {
+            content: "이메일 주소 또는 전화번호";
+            position: absolute;
+            width: 100%;
+            left: 0;
+            bottom: 10px;
+            text-align: left;
+            font-size: 17px;
+            color: var(--input-warp-color);;
+            transition: 0.3s;
+          }
+          &::before {
+            content: "";
+            position: absolute;
+            width: 0;
+            height: 2px;
+            bottom: -1px;
+            left: 50%;
+            transform: translateX(-50%);
+            background-color: $main-color;
+            transition: 0.3s;
+          }
+          &:focus-within {
+            &::after {
+              color: $main-color;
+              font-size: 14px;
+              bottom: 100%;
+            }
+            &::before {
+              width: 100%;
+              background-color: $main-color;
+            }
+          }
+          input {
+            background-color: transparent;
+            border: none;
+            font-size: 18px;
+            padding-bottom: 10px;
+            color: white;
+            width: 100%;
+            outline: none;
+          }
+        }
+        .remember-id {
+          display: block;
+          text-align: left;
+          padding-top: 4px;
+          padding-left: 8px;
+          display: flex;
+          align-items: center;
+          gap: 8px;
+          cursor: pointer;
+          input {
+            display: none;
+            &:checked + .check-mark {
+              background-color: $main-color;
+              border-color: transparent;
+              &::after {
+                content: "";
+                position: absolute;
+                width: 30%;
+                height: 2px;
+                background-color: var(--body-background);
+                left: 2px;
+                top: 50%;
+                transform: rotate(45deg);
+              }
+              &::before {
+                content: "";
+                position: absolute;
+                width: 60%;
+                height: 2px;
+                background-color: var(--body-background);
+                right: 1px;
+                top: 50%;
+                transform: rotate(-45deg);
+              }
+            }
+          }
+          .check-mark {
+            position: relative;
+            display: inline-block;
+            width: 18px;
+            height: 18px;
+            border: 1px solid var(--input-warp-color);;
+            border-radius: 50%;
+          }
+          span {
+            font-weight: 500;
+          }
+        }
+        .submit-btn {
+          width: 100%;
+          height: 44px;
+          border-radius: 130px;
+          margin-top: 30px;
+          color: white;
+          background-color: $main-color;
+          opacity: 0.4;
+          pointer-events: none;
+          &.active {
+            pointer-events: inherit;
+            opacity: 1;
+          }
+        }
+        > div {
+          text-align: left;
+          margin-top: 24px;
+          a {
+            color: rgb(169, 169, 169);
+            text-decoration: underline;
+            font-weight: 600;
+          }
+        }
+        .login-btn {
+          display: flex;
+          align-items: center;
+          width: 100%;
+          background-color: var(--login-btn);
+          border-radius: 130px;
+          margin-top: 24px;
+          padding: 2px 0;
+          transition: 0.3s;
+          &:hover {
+            background-color: var(--login-btn-hover);
+          }
+          &.qr-code {
+            margin-top: 16px;
+          }
+          .icon-warp {
+            margin-left: 5px;
+            display: flex;
+            img {
+            }
+          }
+          p {
+            line-height: 40px;
+            width: 100%;
+            font-weight: 600;
+            text-align: center;
+            color: var(--font-color);
+            padding-right: 12px;
+          }
+        }
+      }
+    }
+    #find-id{
+      padding: 60px 72px 48px;
+      .title-wrap {
+        p {
+          &:nth-child(1) {
+            font-weight: 300;
+            line-height: 40px;
+            font-size: 30px;
+          }
+          &:nth-child(2) {
+            font-size: 15px;
+            font-weight: 500;
+            margin-top: 20px;
+            color: var(--font-color);
+          }
+        }
+      }
+      .family-name{
+        margin-top: 60px;
+        .input-wrap {
+          &::after {
+            content: "성";
+          }
+        }
+      }
+      .name{
+        margin-top: 40px;
+        .input-wrap {
+          &::after {
+            content: "이름";
+          }
+        }
+      }
+      .user-birth{
+        margin-top: 40px;
+        display: flex;
+        gap: 8px;
+        .input-wrap {
+          &:nth-child(1){
+            &::after {
+              content: "년";
+            }
+          }
+          &:nth-child(2){
+            pointer-events: none;
+            &::after {
+              content: "월";
+            }
+            select{
+              cursor: pointer;
+              pointer-events: all;
+              width: 100%; height: 100%;
+              border: none;
+              background-color: var( --tag-color);
+              color: var(--font-color);
+              font-size: 16px;
+            }
+          }
+          &:nth-child(3){
+            &::after {
+              content: "일";
+            }
+          }
+        }
+      }
+      .submit-btn{
+        display: block;
+        margin: 72px auto 0 auto;
+        background-color: $main-color;
+        color: white;
+        width: 100%; max-width: 236px;
+        min-height: 44px;
+        border-radius: 130px;
+        opacity: 0.4;
+      }
+    }
+    #find-passward{
+      padding: 60px 72px 48px;
+      .title-wrap {
+        p {
+          &:nth-child(1) {
+            font-weight: 300;
+            line-height: 40px;
+            font-size: 30px;
+          }
+          &:nth-child(2) {
+            font-size: 15px;
+            font-weight: 500;
+            margin-top: 20px;
+            color: var(--font-color);
+          }
+        }
+      }
+      .input-wrap {
+        margin-top: 28px;
+      }
+      .submit-btn{
+        display: block;
+        margin: 72px auto 0 auto;
+        background-color: $main-color;
+        color: white;
+        width: 100%; max-width: 236px;
+        min-height: 44px;
+        border-radius: 130px;
+        opacity: 0.4;
+      }
+    }
+    #sign-up{
+      padding: 72px 120px;
+      text-align: center;
+      .title-wrap {
+        p {
+          &:nth-child(1) {
+            font-weight: 500;
+            line-height: 36px;
+            font-size: 25px;
+          }
+          &:nth-child(2) {
+            margin-top: 36px;
+            font-size: 14px;
+            color: var(--font-color);
+          }
+        }
+      }
+      .btn-warp{
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        gap: 24px;
+        margin-top: 72px;
+        button{
+          width: 286px;
+          min-width: 236px; min-height: 44px;
+          background-color: $main-color;
+          color: white;
+          border-radius: 130px;
+          padding: 6px 16px;
+        }
+      }
+    }
+  }
+}
+/*----------- footer -----------*/
+footer {
+  background-color: var(--body-background);
+  .footer-wrap {
+    position: relative;
+    left: 50%;
+    bottom: 0;
+    transform: translateX(-50%);
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-end;
+    max-width: 1440px;
+    padding: 26px 24px 48px;
+    .footer-links {
+      display: flex;
+      gap: 32px;
+      a {
+        color: var(--font-color);
+        font-size: 12px;
+      }
+    }
+    .copyright-info {
+      text-align: right;
+      img {
+        opacity: 0.56;
+        filter: unquote("invert(var(--logo-invert))");
+      }
+      p {
+        font-size: 12px;
+        color: rgb(153, 153, 153);
+      }
+    }
+  }
+  .anchor {
+    border-radius: 5px 0 0 5px;
+    overflow: hidden;
+    position: fixed;
+    left: calc(100% - 70px);
+    bottom: 20px;
+    transition: 0.3s;
+    &:hover {
+      left: calc(100% - 256px);
+    }
+    .anchor-warp {
+      width: 256px;
+      height: 65px;
+      display: flex;
+      .anchor-img {
+        width: 70px;
+        background-color: #f9f9f9;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        img {
+          width: 40px;
+          height: 40px;
+        }
+        .anchor-text-wrap {
+          margin-top: -5px;
+          a,
+          span {
+            color: black;
+            font-size: 5px;
+          }
+        }
+      }
+      > .anchor-text-wrap {
+        padding-top: 13px;
+        padding-left: 15px;
+        background-color: $main-color;
+        width: calc(100% - 70px);
+        a {
+          color: white;
+        }
+        > span {
+          font-size: 13px;
+        }
+        .link-warp {
+          font-size: 11px;
+          a:hover {
+            text-decoration: underline;
+          }
+        }
+      }
+    }
+  }
+}
+
+@media (max-width: 682px) {
+  body{
+    min-height: 100vh;
+  }
+  /*----------- header -----------*/
+  header {
+    height: 56px;
+    padding: 20.5px 24px;
+    background-color: transparent;
+    .header-wrap {
+      img {
+        min-width: 88px;
+        height: 14px;
+        filter:  unquote("invert(var(--logo-invert))");
+      }
+    }
+  }
+  /*----------- main -----------*/
+  main {
+    padding-top: 0;
+    width: 100%;
+    background-color: var(--body-background);
+    .box-wrap {
+      width: 100%;
+      background-color: transparent;
+      padding: 0;
+      #samsung-login {
+        padding: 72px 22px 0;
+        text-align: center;
+        .title-wrap {
+          p {
+            &:nth-child(1) {
+              font-size: 23px;
+            }
+          }
+        }
+        .body-wrap {
+          width: 100%;
+          margin-top: 120px;
+          .login-btn {
+            &.qr-code {
+              display: none;
+              margin-top: 16px;
+            }
+          }
+        }
+      }
+      #find-id{
+        padding: 30px 24px;
+        .title-wrap {
+          p {
+            &:nth-child(1) {
+              font-weight: 500;
+              line-height: 29px;
+              font-size: 22px;
+            }
+          }
+        }
+        .submit-btn{
+          width: 216px;
+        }
+      }
+      #find-passward{
+        padding: 30px 24px;
+        .title-wrap {
+          p {
+            &:nth-child(1) {
+              font-weight: 500;
+              line-height: 29px;
+              font-size: 22px;
+            }
+          }
+        }
+        .submit-btn{
+          margin: 50px auto 0 auto;
+          max-width: 216px;
+        }
+      }
+      #sign-up{
+        padding: 72px 22px 0;
+        .btn-warp{
+          gap: 12px;
+          margin-top: 20px;
+        }
+      }
+    }
+  }
+  /*----------- footer -----------*/
+  footer {
+    
+    .footer-wrap {
+      position: inherit;
+      width: 100%;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      margin: auto;
+      transform: translate(0);
+      padding: 40px 24px;
+      .footer-links {
+        display: flex;
+        gap: 10px;
+      }
+      .copyright-info {
+        margin-top: 22px;
+        text-align: center;
+        img {
+          min-width: 101px; height: 16px;
+        }
+        p {
+          font-size: 10px;
+        }
+      }
+    }
+    .anchor {
+      bottom: 10px;
+      transition: 0.3s;
+    }
+  }
+}
