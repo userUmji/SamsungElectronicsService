@@ -31,9 +31,12 @@
 
 ```
 🎮 WebRedesign-WildRift
- ┣ 📂 scss
+ ┣ 📂 common
  ┣ 📂 css
- ┗ 📂 js
+ ┣ 📂 images
+ ┣ 📂 js
+ ┣ 📂 pages
+ ┗ 📂 scss
    📄 index.html
 ```
 
